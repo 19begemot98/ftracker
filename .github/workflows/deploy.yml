@@ -19,6 +19,8 @@ jobs:
           modules: '.'
           meta: |
             my https://github.com/19begemot98/ftracker
+      - name: Debug file structure
+        run: find . -maxdepth 3 -not -path '*/.*'
       - name: Move files from subfolder to root
         run: cp -r ftracker/-/* ftracker/
       - name: Create .nojekyll
