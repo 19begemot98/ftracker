@@ -19,9 +19,13 @@ jobs:
           modules: 'my/ftracker'
           meta: |
             my https://github.com/19begemot98/ftracker
+      - name: Move files from subfolder to root
+        run: cp -r ftracker/-/* ftracker/
+      - name: Create .nojekyll
+        run: touch ftracker/.nojekyll
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main'
         uses: alex-page/blazing-fast-gh-pages-deploy@v1.1.0
         with:
           repo-token: ${{ secrets.GH_PAT }}
-          site-directory: 'ftracker/-'
+          site-directory: 'ftracker'
