@@ -18,11 +18,11 @@ jobs:
           package: 'ftracker'
           modules: 'my/ftracker'
           meta: |
-            my https://github.com/19begemot98/ftracker
+            my https://github.com/19begemot98a/ftracker
 
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main'
         uses: alex-page/blazing-fast-gh-pages-deploy@v1.1.0
         with:
           repo-token: ${{ secrets.GH_PAT }}
-          site-directory: 'my/ftracker/-'
+          site-directory: 'my/ftracker
