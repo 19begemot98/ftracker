@@ -18,7 +18,7 @@ jobs:
           package: 'ftracker'
           modules: 'my/ftracker'
           meta: |
-            my https://github.com/19begemot98a/ftracker
+            my https://github.com/19begemot98/ftracker
 
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main'
