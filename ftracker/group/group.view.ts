@@ -5,7 +5,7 @@ namespace $.$$ {
 		click_uri( next?: string ) { return next ?? '' }
 	}
 
-	export class $my_tracker_group extends $.$my_ftracker_group {
+	export class $my_ftracker_group extends $.$my_ftracker_group {
 
 		@$mol_mem
 		group_id() {

@@ -1,9 +1,9 @@
 [my_ftracker_exercise] {
     background: rgba(255, 255, 255, 0.95);
-    border-radius: 20px;
+    border-radius: 60px;
     padding: 32px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-    margin: 24px;
+    margin: 10px;
     border: 1px solid rgba(178, 235, 242, 0.4);
 }
 
