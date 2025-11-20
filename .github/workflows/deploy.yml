@@ -20,9 +20,10 @@ jobs:
           meta: |
             my https://github.com/19begemot98/ftracker
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages (MOL)
         if: github.ref == 'refs/heads/main'
-        uses: alex-page/blazing-fast-gh-pages-deploy@v1.1.0
+        uses: hyoo-ru/mol_github_pages@master
         with:
-          repo-token: ${{ secrets.GH_PAT }}
-          site-directory: 'my/ftracker'
+          root: my/ftracker
+          token: ${{ secrets.GITHUB_TOKEN }}
+          package: ftracker 
