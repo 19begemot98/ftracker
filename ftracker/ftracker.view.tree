@@ -1,0 +1,21 @@
+$my_ftracker $mol_page
+	history_uri? \
+	workout_uri? \
+	title \Фитнес Трекер
+	body /
+		<= Nav $mol_list
+			rows /
+				<= Workout_link $mol_link
+					uri <= workout_uri
+					sub /
+						<= Workout_label $mol_labeler
+							title \Тренировка
+				<= History_link $mol_link
+					uri <= history_uri
+					sub /
+						<= History_label $mol_labeler
+							title \История
+		<= Current_page
+	Workout_page $my_ftracker_workout
+	History_page $my_ftracker_history
+	Exercise_page $my_ftracker_exercise

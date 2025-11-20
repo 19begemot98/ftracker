@@ -1,0 +1,11 @@
+node_modules/
+
+**/-\
+**/-*
+
+mol/
+mam.jam.js
+mam.ts
+
+.DS_Store
+npm-debug.log

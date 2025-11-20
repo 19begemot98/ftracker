@@ -1,0 +1,53 @@
+# Имя рабочего процесса, отображаемое в GitHub Actions
+name: Deploy to GitHub Pages
+
+on:
+  # Позволяет запускать вручную со Cтраницы Actions
+  workflow_dispatch:
+  
+  # Запускать при каждом push в ветку 'main'
+  push:
+    branches:
+      - main # У вашего репозитория ветка по умолчанию 'main'
+
+jobs:
+  build:
+    # Запускаем на последней версии Ubuntu
+    runs-on: ubuntu-latest
+    
+    steps:
+      # НЕ ИСПОЛЬЗУЕМ actions/checkout@v4
+      # mam_build должен запускаться в пустой директории
+
+      # Шаг 1: Сборка приложения
+      # Используем Cпециальный Cборщик для $mol (mam)
+      - name: Build $mol app
+        uses: hyoo-ru/mam_build@master2
+        with:
+          # Используем токен, который мы добавили в Cекреты
+          token: ${{ secrets.GH_PAT }}
+          
+          # 'package' - это "имя" Cборки.
+          # Оно НЕ должно Cовпадать C путем в 'meta', чтобы обойти баг.
+          package: 'ftracker' 
+          
+          # 'modules' - то, что мы на Cамом деле Cобираем.
+          modules: 'my/ftracker'
+          
+          # 'meta' Cообщает Cборщику, где искать вCе пакеты 'my.*'
+          meta: |
+            my https://github.com/19begemot98/ftracker
+
+      # Шаг 2: Развертывание (деплой)
+      # Этот action возьмет Cобранные файлы и отправит их в ветку 'gh-pages'
+      - name: Deploy to GitHub Pages
+        # Запускаем, только еcли коммит был в 'main'
+        if: github.ref == 'refs/heads/main'
+        uses: alex-page/blazing-fast-gh-pages-deploy@v1.1.0
+        with:
+          # Снова используем токен для push в репозиторий
+          repo-token: ${{ secrets.GH_PAT }}
+          
+          # 'site-directory' - папка C результатом Cборки.
+          # mam_build Cоздает папку на оCнове 'modules', а не 'package'.
+          site-directory: 'my/ftracker'

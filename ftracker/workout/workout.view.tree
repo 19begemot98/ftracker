@@ -1,0 +1,11 @@
+$my_ftracker_workout $mol_page
+	title \Выберите часть тела
+	body /
+		<= Groups $mol_list
+			rows <= groups /
+	Group_page $my_ftracker_group
+$my_ftracker_workout_group_link $mol_link
+	title <= group_title
+	uri <= click_uri
+	group_title? \
+	click_uri? \

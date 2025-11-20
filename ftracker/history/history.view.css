@@ -1,0 +1,133 @@
+[my_ftracker_history] {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    margin: 24px;
+    border: 1px solid rgba(178, 235, 242, 0.3);
+    min-height: 500px;
+}
+[my_ftracker_history_title] {
+    color: #00695c;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 4px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(128, 203, 196, 0.2);
+}
+
+[my_ftracker_history_History_list] {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 30px;
+    min-height: 300px;
+}
+
+[my_ftracker_history_History_list] [mol_labeler] {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 20px;
+    border-left: 3px solid #4db6ac;
+    box-shadow: 0 2px 6px rgba(128, 203, 196, 0.1);
+    transition: all 0.3s ease;
+}
+
+[my_ftracker_history_History_list] [mol_labeler]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(128, 203, 196, 0.25);
+    border-left-color: #26a69a;
+}
+
+[my_ftracker_history_History_list] [mol_labeler_title] {
+    color: #37474f;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin: 0;
+}
+
+[my_ftracker_history_History_list] [mol_labeler]:first-child [mol_labeler_title] {
+    color: #546e7a;
+    font-style: italic;
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(248, 251, 252, 0.8);
+    border-radius: 12px;
+    border-left: 4px solid #b2ebf2;
+    font-size: 1.2rem;
+}
+
+[my_ftracker_history_Clear_button] {
+    background: linear-gradient(135deg, #80cbc4, #b2dfdb);
+    color: #004d40;
+    border: none;
+    border-radius: 25px;
+    padding: 16px 32px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(128, 203, 196, 0.3);
+    margin: 20px auto;
+    display: block;
+    border: 1px solid #80cbc4;
+}
+
+[my_ftracker_history_Clear_button]:hover {
+    background: linear-gradient(135deg, #4db6ac, #80cbc4);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 22px rgba(128, 203, 196, 0.5);
+    color: #00695c;
+}
+
+
+[my_ftracker_history_item] {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 12px;
+    border-left: 4px solid #4db6ac;
+    box-shadow: 0 2px 8px rgba(128, 203, 196, 0.15);
+    transition: all 0.3s ease;
+}
+
+[my_ftracker_history_item]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(128, 203, 196, 0.25);
+    border-left-color: #26a69a;
+}
+
+[my_ftracker_history_item_title] {
+    color: #37474f;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin: 0;
+}
+
+
+@media (max-width: 768px) {
+    [my_ftracker_history] {
+        padding: 20px;
+        margin: 16px;
+    }
+    
+    [my_ftracker_history_title] {
+        font-size: 1.6rem;
+        padding: 16px;
+        margin-bottom: 30px;
+    }
+    
+    [my_ftracker_history_History_list] [mol_labeler_title] {
+        font-size: 1rem;
+    }
+    
+    [my_ftracker_history_Clear_button] {
+        padding: 14px 28px;
+        font-size: 1rem;
+    }
+}

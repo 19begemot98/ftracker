@@ -1,0 +1,86 @@
+$my_ftracker_exercise $mol_page
+	finish_exercise_click? \
+	reset_counter_click? \
+	increment_set_click? \
+	timer_button_click? \
+	timer_reset_click? \
+	exercise_title? \
+	exercise_description? \
+	exercise_sets_info? \
+	exercise_reps_info? \
+	exercise_time_info? \
+	exercise_rest_info? \
+	exercise_image_uri? \
+	time_display_text? \
+	timer_button_title? \
+	set_label_text? \
+	title <= exercise_title
+	body /
+		<= Exercise_Image $mol_image
+			uri <= exercise_image_uri
+			title <= exercise_title
+		<= Exercise_Details $mol_view
+			sub /
+				<= Description_Title $mol_labeler
+					title \Описание
+				<= Description_Text $mol_text
+					text <= exercise_description
+		<= Recommendations_Title $mol_labeler
+			title \Рекомендации по выполнению
+		<= Sets_Info $mol_labeler
+			title \Подходы:
+			content /
+				<= Sets_Info_Text $mol_text
+					text <= exercise_sets_info
+		<= Reps_Info $mol_labeler
+			title \Повторения:
+			content /
+				<= Reps_Info_Text $mol_text
+					text <= exercise_reps_info
+		<= Time_Info $mol_labeler
+			title \Время тренировки:
+			content /
+				<= Time_Info_Text $mol_text
+					text <= exercise_time_info
+		<= Rest_Info $mol_labeler
+			title \Отдых между подходами:
+			content /
+				<= Rest_Info_Text $mol_text
+					text <= exercise_rest_info
+		<= Timer_block $mol_view
+			sub /
+				<= Timer_title $mol_labeler
+					title \Таймер
+				<= Timer_row $mol_row
+					sub /
+						<= Timer_label $mol_labeler
+							title <= time_display_text
+						<= Timer_controls $mol_row
+							sub /
+								<= Start_pause $mol_button
+									title <= timer_button_title
+									click? <=> timer_button_click
+								<= Reset_timer $mol_button
+									title \Сбросить
+									click? <=> timer_reset_click
+		<= Counter_block $mol_view
+			sub /
+				<= Counter_title $mol_labeler
+					title \Подходы
+				<= Counter_row $mol_row
+					sub /
+						<= Big_counter $mol_labeler
+							title <= set_label_text
+						<= Counter_buttons $mol_row
+							sub /
+								<= Big_plus $mol_button
+									title \Подход
+									click? <=> increment_set_click
+								<= Reset_counter $mol_button
+									title \Сбросить
+									click? <=> reset_counter_click
+		<= Finish_row $mol_row
+			sub /
+				<= Finish $mol_button_major
+					title \Завершить тренировку
+					click? <=> finish_exercise_click
