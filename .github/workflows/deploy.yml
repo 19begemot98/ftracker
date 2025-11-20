@@ -16,7 +16,7 @@ jobs:
         with:
           token: ${{ secrets.GH_PAT }}
           package: 'ftracker'
-          modules: 'my/ftracker'
+          modules: '.'
           meta: |
             my https://github.com/19begemot98/ftracker
       - name: Move files from subfolder to root
