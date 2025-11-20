@@ -1,24 +1,28 @@
 name: Deploy to GitHub Pages
+
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
-  workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Build $mol app
         uses: hyoo-ru/mam_build@master2
         with:
           token: ${{ secrets.GH_PAT }}
           package: 'ftracker'
-          modules: 'ftracker'
+          modules: 'my/ftracker'
           meta: |
             my https://github.com/19begemot98/ftracker
+
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main'
         uses: alex-page/blazing-fast-gh-pages-deploy@v1.1.0
         with:
           repo-token: ${{ secrets.GH_PAT }}
-          site-directory: 'ftracker'
+          site-directory: 'my/ftracker/-'
