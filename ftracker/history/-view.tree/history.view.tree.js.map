@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"sources": [
+		"my/ftracker/history/history.view.tree"
+	],
+	"sourcesContent": [
+		"$my_ftracker_history $mol_page\n\tclear_history_click? \\\n\ttitle \\История\n\tbody /\n\t\t<= History_list $mol_list\n\t\t\trows <= history_items /\n\t\t<= Clear_button $mol_button\n\t\t\ttitle \\Очистить историю\n\t\t\tclick? <=> clear_history_click\n"
+	],
+	"mappings": "AAAA,AAAA,uDAAqB,sBAArB;AAAA,AAKW;AAAA,AAAA,UAAc,EAAd;AAAA;AADN;AAAA,AAAa,qCAAb;AACF,uBAAK,KAAG,gBAAH,CAAL,CADE;AAAA,UAAa,GAAb;AAAA;AAEA;AAAA,AAAa,uCAAb;AACF,wBAAO,kBAAP,CADE;AAEF,4BAAO,KAAI,sBAAJ,CAAP,CAFE;AAAA,UAAa,GAAb;AAAA;AALJ;AAAA,AAAA;AAAA,UAAsB,EAAtB;AAAA;AACA;AAAA,AAAA,UAAO,SAAP;AAAA;AACA;AAAA,AAAA,UAAK,CACJ,KAAG,eAAH,CADI,EAGJ,KAAG,eAAH,CAHI,CAAL;AAAA;AAHD,CAAA;AAIK,YAJL,CAIK,kDAJL;AAMK,YANL,CAMK,kDANL;AACC,YADD,CACC,yDADD;"
+}
