@@ -1,9 +1,0 @@
-$my_ftracker_history $mol_page
-	clear_history_click? \
-	title \История
-	body /
-		<= History_list $mol_list
-			rows <= history_items /
-		<= Clear_button $mol_button
-			title \Очистить историю
-			click? <=> clear_history_click
