@@ -20,7 +20,7 @@ jobs:
           meta: |
             my https://github.com/19begemot98/ftracker
       - name: Rename entry file
-        run: mv ftracker/-/test.html ftracker-/index.html
+        run: mv ftracker/-/test.html ftracker/-/index.html
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main'
         uses: alex-page/blazing-fast-gh-pages-deploy@v1.1.0
