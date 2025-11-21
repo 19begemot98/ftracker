@@ -49,3 +49,25 @@
 	text-align: center;
 	margin: 0;
 }
+
+@media (max-width: 768px) {
+	[my_ftracker_group_title] {
+		font-size: 1.5rem;
+		padding: 16px;
+		margin: 16px;
+	}
+
+	[my_ftracker_group_Exercises] {
+		padding: 0 16px;
+		gap: 12px;
+	}
+
+	[my_ftracker_group_exercise_card_Card] {
+		padding: 20px;
+		border-radius: 12px;
+	}
+
+	[my_ftracker_group_exercise_card_Title] {
+		font-size: 1.1rem;
+	}
+}

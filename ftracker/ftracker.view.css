@@ -123,3 +123,30 @@
 	background: linear-gradient(135deg, #00897b, #26a69a);
 	box-shadow: 0 6px 22px rgba(38, 166, 154, 0.6);
 }
+
+@media (max-width: 768px) {
+	[my_ftracker_title] {
+		font-size: 1.6rem;
+		padding: 20px 16px;
+	}
+
+	[my_ftracker_Nav] [mol_link] {
+		height: 55px;
+		font-size: 1rem;
+	}
+
+	[my_ftracker_workout],
+	[my_ftracker_history],
+	[my_ftracker_exercise] {
+		padding: 20px;
+		margin: 16px;
+		border-radius: 16px;
+	}
+
+	[mol_button] {
+		padding: 12px 24px;
+		border-radius: 20px;
+		font-size: 1rem;
+	}
+}
+

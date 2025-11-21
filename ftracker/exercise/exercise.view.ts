@@ -2,7 +2,6 @@ namespace $.$$ {
 
 	export class $my_ftracker_exercise extends $.$my_ftracker_exercise {
 
-		// Карта данных для упражнений
 		Exercise_Data_Map = {
 			'Жим лёжа': {
 				description: 'Базовое упражнение для грудных мышц. Лягте на скамью, опустите штангу к груди и выжмите вверх.',
