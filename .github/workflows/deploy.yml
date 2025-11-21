@@ -16,27 +16,14 @@ jobs:
         with:
           token: ${{ secrets.GH_PAT }}
           package: 'ftracker'
-          modules: '.'
+          modules: 'my/ftracker'
           meta: |
             my https://github.com/19begemot98/ftracker
-
-      - name: Find and Move Build Artifacts
-        run: |
-          echo "🔍 Searching for web.js..."
-          BUILD_DIR=$(find . -name web.js | grep "/-/" | head -n 1 | xargs dirname)
-          if [ -z "$BUILD_DIR" ]; then
-            echo "❌ Error: Build failed! web.js not found."
-            find . -maxdepth 4 -not -path '*/.*' # Показать файлы для отладки
-            exit 1
-          fi
-          echo "✅ Found build artifacts in: $BUILD_DIR"
-          echo "🚚 Moving files to ftracker/ root..."
-          cp -r $BUILD_DIR/* ftracker/
-      - name: Create .nojekyll
-        run: touch ftracker/.nojekyll
+      - name: Rename entry file
+        run: mv my/ftracker/-/test.html my/ftracker-/index.html
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main'
         uses: alex-page/blazing-fast-gh-pages-deploy@v1.1.0
         with:
           repo-token: ${{ secrets.GH_PAT }}
-          site-directory: 'ftracker'
+          site-directory: 'my/ftracker'

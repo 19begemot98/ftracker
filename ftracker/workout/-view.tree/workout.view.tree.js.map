@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"sources": [
+		"my/ftracker/workout/workout.view.tree"
+	],
+	"sourcesContent": [
+		"$my_ftracker_workout $mol_page\n\ttitle \\Выберите часть тела\n\tbody /\n\t\t<= Groups $mol_list\n\t\t\trows <= groups /\n\tGroup_page $my_ftracker_group\n$my_ftracker_workout_group_link $mol_link\n\ttitle <= group_title\n\turi <= click_uri\n\tgroup_title? \\\n\tclick_uri? \\\n"
+	],
+	"mappings": "AAAA,AAAA,uDAAqB,sBAArB;AAAA,AAIW;AAAA,AAAA,UAAO,EAAP;AAAA;AADN;AAAA,AAAO,qCAAP;AACF,uBAAK,KAAG,SAAH,CAAL,CADE;AAAA,UAAO,GAAP;AAAA;AAFJ;AAAA,AAAA,UAAO,qBAAP;AAAA;AACA;AAAA,AAAA,UAAK,CACJ,KAAG,SAAH,CADI,CAAL;AAAA;AAGA;AAAA,AAAW,8CAAX;AAAA,UAAW,GAAX;AAAA;AALD,CAAA;AAGK,YAHL,CAGK,4CAHL;AAKC,YALD,CAKC,gDALD;AAMA,6EAAgC,sBAAhC;AAAA,AACC;AAAA,AAAA,UAAM,KAAG,cAAH,CAAN;AAAA;AACA;AAAA,AAAA,UAAI,KAAG,YAAH,CAAJ;AAAA;AACA;AAAA,AAAA;AAAA,UAAc,EAAd;AAAA;AACA;AAAA,AAAA;AAAA,UAAY,EAAZ;AAAA;AAJD,CANA;AASC,YAHD,CAGC,4DATD;AAUC,YAJD,CAIC,0DAVD;"
+}

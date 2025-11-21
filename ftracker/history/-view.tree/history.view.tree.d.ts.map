@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"sources": [
+		"my/ftracker/history/history.view.tree"
+	],
+	"mappings": "AAAA;AAAA;AAAA,AAKG;AAAA,AAAQ,cALX,oBAKW;AAAA;AAAR,cADe,SACf;AAAA;AAEA;AAAA,AAAO;AAAA;AAAP,cADe,WACf;AAAA;AACA;AAAA,AAAW,cARd,oBAQc;AAAA;AAAX,cAFe,WAEf;AAAA;AARH,kCAAqB,kBAArB;AAKW,AAAA,oBAAc;AADpB,AAAA,mBAAa;AAEb,AAAA,mBAAa;AALjB,AAAA,8BAAsB,MAAtB,IAAsB;AACtB,AAAA,YAAO;AACP,AAAA,WAAK;AAHN;AAAA;AAAA;",
+	"file": "history.view.tree.d.ts",
+	"sourceRoot": "../../../.."
+}
