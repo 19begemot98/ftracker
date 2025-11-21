@@ -111,11 +111,11 @@ namespace $.$$ {
 		} as const
 
 		Exercise_Image_Map = {
-			'Жим лёжа': 'https://tutknow.ru/uploads/posts/2015-08/thumbs/1439220091_zhim-shtangi-lezha.jpg',
+			'Жим лёжа': 'https://avatars.dzeninfra.ru/get-zen_doc/9703143/pub_648d635903309d63f9ad646c_648d65ed38c1ca4530374c81/scale_1200',
 			'Отжимания': 'https://fitseven.ru/wp-content/uploads/2019/03/kak-pravilno-otjimatsya.jpg', 
-			'Сведение рук': 'https://tutknow.ru/uploads/posts/2015-07/thumbs/1437572941_svedeniya-ruk-v-trenazhere.jpg',
+			'Сведение рук': 'https://avatars.mds.yandex.net/i?id=91c17b30ce7139671981d2ba81ee0f1e_l-4078174-images-thumbs&n=13',
 			'Приседания': 'https://th.bing.com/th/id/R.78f7205f96b7a28d6eb98ae666959388?rik=1uyunsvuovRWiw&pid=ImgRaw&r=0',
-			'Выпады': 'https://tutknow.ru/uploads/posts/2015-06/thumbs/1435241911_vypady-so-shtangoy-i-gantelyami.jpg',
+			'Выпады': 'https://ice-profy.ru/wp-content/uploads/2023/05/3-3.jpeg',
 			'Жим ногами': 'https://th.bing.com/th/id/R.b2f3246d335b7dc4c102cae04b770c2b?rik=R5DetJzCyhKCaw&pid=ImgRaw&r=0p',
 			'Бицепс с гантелями': 'https://sportdush.ru/wp-content/uploads/2021/02/uprazhneniya-na-biceps-s-gantelyami-tehnika-vypolneniya-768x449.jpg',
 			'Французский жим': 'https://stoneforest.ru/wp-content/uploads/2020/11/francuzskiy-zhim-1.jpg',
